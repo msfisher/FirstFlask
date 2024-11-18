@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Flask By Fisher</title>
+</head>
+<body>
+    <h1> Summarize The Text </h1>
+    <h3> Submit your text and see the distribution of workds along with their frequency of occurrence </h3>
+    <h4> Future features will add: identifying sentences based on their importance and return a summary of text submitted</h4>
+    <div>
+        <form action="{{ url_for('read_form') }}", method="post">
+            <label for="textSubmit">Submit your text: </label>
+            <input name="textSubmit" type="text" id="textSubmit">
+            <button type="submit"> Submit Text </button>
+        </form>
+    </div>
+</body>
+</html>
