@@ -8,6 +8,7 @@ from flask import Flask, request, render_template
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+from datetime import datetime
 
 nltk.download('punkt_tab')
 nltk.download('stopwords')
@@ -24,6 +25,10 @@ def home():
     the defined URL endpoint is requested by the user
     We have attached this function to the route ("/") which is home page
     """
+    # added the next line just for testing and debugging purposes
+    now = datetime.now()
+    print(now)
+
     return render_template("index.html")
 
 
